@@ -1,0 +1,17 @@
+{
+  "name": "mcs",
+  "version": "1.0.0",
+  "description": "Mocha, Chai and Sinonjs chapter",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "debug": "^2.2.0",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.2"
+  }
+}
