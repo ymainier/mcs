@@ -1,4 +1,3 @@
-var Backbone = require('backbone');
 var chai = require('chai');
 var expect = chai.expect;
 
