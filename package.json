@@ -4,7 +4,10 @@
   "description": "Mocha, Chai and Sinonjs chapter",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "watch": "mocha --recursive --watch",
+    "grep-hooks": "DEBUG=hooks mocha --recursive --grep hooks",
+    "tdd-style": "mocha --recursive --ui tdd --grep TDD"
   },
   "author": "",
   "license": "ISC",
