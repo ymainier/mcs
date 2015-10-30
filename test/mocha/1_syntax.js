@@ -9,15 +9,13 @@ describe('mocha', function () {
 		});
 	});
 
-	/*
-	   suite('TDD style, launch with npm run tdd-style', function () {
-	   suite('a feature', function () {
-	   suite('in a context', function () {
-	   test('should do something', function () {
-	// assertions
-	});
-	});
-	});
-	});
-	*/
+	// suite('TDD style, launch with npm run tdd-style', function () {
+	// 	suite('a feature', function () {
+	// 		suite('in a context', function () {
+	// 			test('should do something', function () {
+	// 				// assertions
+	// 			});
+	// 		});
+	// 	});
+	// });
 });

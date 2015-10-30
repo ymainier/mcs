@@ -6,15 +6,23 @@ chai.use(sinonChai);
 
 describe('sinon', function () {
 	describe('spies', function () {
-		it('should spy on function call, arguments and return value', function () {
-			function add(a, b) {
-				return a + b;
+		it('should spy on function call', function () {
+			function once(fn) {
+				var returnValue, called = false;
+				return function () {
+					if (!called) {
+						called = true;
+						returnValue = fn.apply(this, arguments);
+					}
+					return returnValue;
+				};
 			}
-			var spiedAdd = sinon.spy(add);
-			var result = spiedAdd(1, 2);
+			var callback = sinon.spy();
+			var proxy = once(callback);
 
-			expect(spiedAdd).to.have.been.calledWith(1, 2);
-			expect(result).to.equal(3);
+			proxy(1, 2, 3);
+
+			expect(callback).to.have.been.calledWith(1, 2, 3);
 		});
 
 		it('should provide anonymous spy', function () {
